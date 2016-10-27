@@ -1,19 +1,22 @@
-.back-gris{
-	background: #EEEEEE;
+body{
+	background-color: #CD5A91;
 }
-.back-gris-checkbox{
-	padding-left: 1%;
-	padding-right: 1%;
-	padding-top: 1%;
-	background: #EEEEEE;
-	width: 380px;
-	text-align: left;
-	height: 50px;
+/*.contenedor-principal{
+	padding-top: 100px;
+	background-color: #B54F80;
+}*/
+.anadir-una-lista{
+	background-color: #B54F80;
+	color: white;	
 }
-.delineado{
-	text-decoration: line-through;
+header{
+	margin-bottom: 70px;
+	background-color: #B54F80;
 }
 
+.trello{
+	width: 15%;
+}
 /*SHORTCUTS*/
 
 .pt-2{

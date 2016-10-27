@@ -1,14 +1,23 @@
+
 var botonAgregar = document.getElementById("botonAgregar");
 	botonAgregar.addEventListener("click", anadirLista);
 
 function anadirLista(e){
-	var cajaLista = document.getElementById("cajaLista");
-	var cuadroTexto = document.createElement("input").setAttribute("placeholder","Añadir una lista");
+	var contenedor = document.getElementById("contendor");
+	var divList = document.createElement("div");
+	var cuadroTexto = document.createElement("input");
+		cuadroTexto.classList.add("form-control");
+		cuadroTexto.setAttribute("placeholder","Añadir una lista");
 	var botonAgregar = document.createElement("button");
-		botonAgregar = document.createTextNode("Hola");
-		cajaLista.appendChild(cuadroTexto);
-		cajaLista.appendChild(botonAgregar);
-
+		botonAgregar.classList.add("btn-success");
+		botonTexto = document.createTextNode("Guardar");
+		botonAgregar.appendChild(botonTexto);
+		botonAgregar.classList.add("btn");
+		contenedor.appendChild(divList);
+		divList.appendChild(cuadroTexto);
+		divList.appendChild(botonAgregar);
+		cajalista.removeChild(botonAgregar);
+		
 	
 	}
 
