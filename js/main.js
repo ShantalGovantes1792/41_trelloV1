@@ -58,10 +58,10 @@ function anadirLista(e){
 	botonAnEt.addEventListener("click", anadirTarea);
 
 	function anadirTarea(e){
-		
+		var tareas = document.createElement("button");
+			tareas.classList.add("btn-lg", "btn-block")
+		input2.innerHTML = cuadroTexto.value;
 	}
-
-		
 
 }
 
