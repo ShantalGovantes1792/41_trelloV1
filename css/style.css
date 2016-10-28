@@ -17,6 +17,18 @@ header{
 .trello{
 	width: 15%;
 }
+.divNuevaTarjeta{
+	background-color: #DEDEDE;
+	border-radius: 5px;
+	width: 400px;
+	height: 300px;
+	padding: 10px;
+	margin-top: 15px;
+}
+
+h4{
+	text-align: center;
+}
 /*SHORTCUTS*/
 
 .pt-2{

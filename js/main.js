@@ -3,23 +3,67 @@ var botonAgregar = document.getElementById("botonAgregar");
 	botonAgregar.addEventListener("click", anadirLista);
 
 function anadirLista(e){
-	var contenedor = document.getElementById("contendor");
+
+	// variable que llama al id contenedor
+	var contenedor = document.getElementById("contenedor");
+	// variable que llama a cajaLista
+	var cajaLista = document.getElementById("cajaLista");
+	// div creado para contener el input y el boton
 	var divList = document.createElement("div");
+	// input nuevo
 	var cuadroTexto = document.createElement("input");
-		cuadroTexto.classList.add("form-control");
-		cuadroTexto.setAttribute("placeholder","Añadir una lista");
+	// estilo agregado al input y atributos
+	cuadroTexto.classList.add("form-control");
+	cuadroTexto.setAttribute("placeholder","Añadir una lista");
+	// boton de agregar, ldespues el estilo y texto dentro del boton
 	var botonAgregar = document.createElement("button");
-		botonAgregar.classList.add("btn-success");
+		botonAgregar.classList.add("btn","btn-success");
 		botonTexto = document.createTextNode("Guardar");
-		botonAgregar.appendChild(botonTexto);
-		botonAgregar.classList.add("btn");
-		contenedor.appendChild(divList);
-		divList.appendChild(cuadroTexto);
-		divList.appendChild(botonAgregar);
-		cajalista.removeChild(botonAgregar);
-		
-	
+	// agregar texto al boton
+	botonAgregar.appendChild(botonTexto);
+	// agregar la clase al boton
+	botonAgregar.classList.add("btn");
+	// agregar div al contenedor
+	contenedor.appendChild(divList);
+	// agregar input al div
+	divList.appendChild(cuadroTexto);
+	// agregar al div el botonAgregar
+	divList.appendChild(botonAgregar);
+	// quitar el boton agregar 
+	// 	cajaLista.removeChild(botonAgregar);
+	// funcion para agregar una tarjeta apretando el boton Guardar
+	botonAgregar.addEventListener("click", anadirTarjeta);
+
+ 	function anadirTarjeta(e){ //funcion para añadir tarjeta
+		contenedor.removeChild(divList);
+		// div creado para contener el textArea y el boton
+		var divNuevaTarjeta = document.createElement("div");
+		var tituloTarjeta = document.createElement("h4");
+		divNuevaTarjeta.classList.add("divNuevaTarjeta");
+		tituloTarjeta.innerHTML = cuadroTexto.value;
+		divNuevaTarjeta.appendChild(tituloTarjeta);
+		cuadroTexto.value = "";
+		contenedor.appendChild(divNuevaTarjeta);
+		var input2 = document.createElement("textarea");
+			input2.classList.add("form-control");
+		input2.setAttribute("placeholder","Añade una tarea");
+		var botonAnEt = document.createElement("button");
+			botonAnEt.classList.add("btn","btn-success");
+			botonAnEtTexto = document.createTextNode("Añadir");
+		botonAnEt.appendChild(botonAnEtTexto);
+		divNuevaTarjeta.appendChild(input2);
+		divNuevaTarjeta.appendChild(botonAnEt);
 	}
+
+	botonAnEt.addEventListener("click", anadirTarea);
+
+	function anadirTarea(e){
+		
+	}
+
+		
+
+}
 
 	// if ( agregar == 0 ){
 
